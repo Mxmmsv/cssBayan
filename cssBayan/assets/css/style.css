@@ -8,6 +8,7 @@
 
 body {
     font-family: 'Poppins', sans-serif;
+    background: linear-gradient( #9198e5,#e66465);
 }
 
 img {
@@ -17,6 +18,10 @@ img {
 
 input {
     display: none;
+}
+
+label {
+    width: 100%;
 }
 
 .container {
@@ -35,7 +40,7 @@ input {
 }
 
 .border {
-    border-bottom: 2px solid;
+    border-bottom: 3px solid;
 }
 
 .meme {
@@ -43,11 +48,15 @@ input {
     flex-direction: column;
     align-items: center;
     user-select: none;
-    padding: 15px 0;
+    padding: 5px 0;
 }
 
 .meme:hover .meme-item{
     display: block;
+}
+
+main:hover .meme-title {
+    color: black;
 }
 
 .meme-title {
@@ -56,16 +65,21 @@ input {
     align-items: center;
     flex-direction: column;
     cursor: pointer;
+    color: crimson;
 }
 
 .meme-item {
     display: none;
 }
 
-input:checked + .meme-item {
+input:checked + span {
+    color: black;
+    transition: .3s;
+}
+
+input:checked ~ .meme-item {
     display: block;
-    
-  }
+}
 
 
 
