@@ -25,7 +25,7 @@ label {
 }
 
 .container {
-    max-width: 1170px;
+    max-width: 75%;
     min-height: 100vh;
     margin: 0 auto;
 }
@@ -35,28 +35,17 @@ label {
     justify-content: center;
 }
 
-.header-item{
-    
-}
-
 .border {
-    border-bottom: 3px solid;
+    border-bottom: 0.2em solid;
 }
 
 .meme {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     user-select: none;
-    padding: 5px 0;
+    padding: 0.75em 0;
 }
 
-.meme:hover .meme-item{
-    display: block;
-}
-
-main:hover .meme-title {
-    color: black;
+.meme-item {
+    display: none;
 }
 
 .meme-title {
@@ -68,13 +57,18 @@ main:hover .meme-title {
     color: crimson;
 }
 
-.meme-item {
-    display: none;
+.meme:hover .meme-item{
+    display: block;
+}
+
+main:hover .meme-title {
+    color: black;
+    transition:  .3s;
 }
 
 input:checked + span {
     color: black;
-    transition: .3s;
+    transition:  .3s;
 }
 
 input:checked ~ .meme-item {
